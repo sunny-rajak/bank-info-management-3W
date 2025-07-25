@@ -11,8 +11,26 @@ const userRoutes = require("./routes/user");
 
 const app = express();
 
+const allowedOrigins = [
+    "http://localhost:3000",
+    "https://bank-info-management-frontend.vercel.app/",
+    "https://bank-info-management-frontend-sunny-rajaks-projects.vercel.app/",
+    "https://bank-info-management-frontend-git-main-sunny-rajaks-projects.vercel.app/",
+];
+
 // Middleware
-app.use(cors());
+app.use(
+    cors({
+        origin: function (origin, callback) {
+            if (!origin || allowedOrigins.includes(origin)) {
+                callback(null, true);
+            } else {
+                callback(new Error("Not allowed by CORS"));
+            }
+        },
+        credentials: true,
+    })
+);
 app.use(express.json());
 
 // Routes
