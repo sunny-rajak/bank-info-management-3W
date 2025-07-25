@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "../axiosConfig";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import "../styles/LoginPage.css";
 
 const LoginPage = () => {
@@ -52,6 +52,10 @@ const LoginPage = () => {
                     />
                     <button type="submit">Login</button>
                 </form>
+                <p className="register-text">
+                    Don't have an account?{" "}
+                    <Link to="/register">Register here</Link>
+                </p>
             </div>
         </div>
     );

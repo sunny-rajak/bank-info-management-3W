@@ -102,7 +102,7 @@ const UserDashboard = () => {
     useEffect(() => {
         if (!token) return;
         fetchUserData();
-    });
+    }, []);
 
     return (
         <div>
