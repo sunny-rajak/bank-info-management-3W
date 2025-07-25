@@ -1,0 +1,89 @@
+.bank-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.bank-modal-content {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.3s ease;
+}
+
+.bank-modal-content h3 {
+    margin-bottom: 1.2rem;
+    text-align: center;
+    font-size: 1.4rem;
+    color: #333;
+}
+
+.bank-modal-content input {
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.65rem 0.9rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: border 0.3s ease;
+}
+
+.bank-modal-content input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.bank-modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.bank-modal-buttons button {
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.bank-modal-buttons button:first-child {
+    background-color: #007bff;
+    color: white;
+}
+
+.bank-modal-buttons button:first-child:hover {
+    background-color: #0056b3;
+}
+
+.bank-modal-buttons button:last-child {
+    background-color: #ddd;
+    color: #333;
+}
+
+.bank-modal-buttons button:last-child:hover {
+    background-color: #bbb;
+}
+
+@keyframes fadeIn {
+    from {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

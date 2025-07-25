@@ -1,0 +1,129 @@
+.admin-dashboard {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.admin-dashboard h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #222;
+    font-size: 1.8rem;
+}
+
+.admin-dashboard .filters {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.admin-dashboard .filters input {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #fff;
+    width: 100%;
+}
+
+/* Table Styling */
+.admin-dashboard table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.admin-dashboard th,
+.admin-dashboard td {
+    padding: 0.75rem 0.9rem;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.admin-dashboard th {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.admin-dashboard td {
+    color: #444;
+}
+
+/* Action buttons */
+.admin-dashboard button {
+    background-color: #ff4d4f;
+    color: white;
+    padding: 0.4rem 0.8rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.2s ease-in-out;
+}
+
+.admin-dashboard button:hover {
+    background-color: #d9363e;
+}
+
+/* Pagination */
+.admin-dashboard .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.admin-dashboard .pagination button {
+    background-color: #1890ff;
+    padding: 0.5rem 1rem;
+}
+
+.admin-dashboard .pagination button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Mobile Responsive Table */
+@media (max-width: 768px) {
+    .admin-dashboard table,
+    .admin-dashboard thead,
+    .admin-dashboard tbody,
+    .admin-dashboard th,
+    .admin-dashboard td,
+    .admin-dashboard tr {
+        display: block;
+        width: 100%;
+    }
+
+    .admin-dashboard thead {
+        display: none;
+    }
+
+    .admin-dashboard tr {
+        margin-bottom: 1rem;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 0.5rem;
+        background: #fafafa;
+    }
+
+    .admin-dashboard td {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.6rem 0.9rem;
+        border-bottom: none;
+        font-size: 0.95rem;
+    }
+
+    .admin-dashboard td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: #555;
+    }
+}

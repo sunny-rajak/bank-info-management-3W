@@ -1,0 +1,86 @@
+/* Overall header styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 16px 24px;
+    background-color: #1e1e2f;
+    color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading style */
+header h2 {
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: #00bcd4;
+}
+
+header > div {
+    position: relative;
+}
+
+/* User icon and name wrapper */
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    background-color: #2c2c3f;
+    padding: 8px 12px;
+    border-radius: 20px;
+    transition: background 0.2s ease-in-out;
+}
+
+.user-info:hover {
+    background-color: #3d3d5c;
+}
+
+/* User icon */
+.user-icon {
+    font-size: 1.6rem;
+    color: #00bcd4;
+}
+
+/* Login link styling */
+.user-info a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.user-info a:hover {
+    text-decoration: underline;
+}
+
+.user-info span {
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: #e0e0e0;
+}
+
+/* Dropdown menu styling */
+.dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 8px;
+    background-color: #e63946;
+    color: #333333;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+}
+
+/* Logout button */
+.dropdown button {
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+}

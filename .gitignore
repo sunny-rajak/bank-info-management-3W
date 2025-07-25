@@ -1,0 +1,29 @@
+# === Root ===
+.env
+.DS_Store
+*.log
+npm-debug.log*
+
+# === Node.js (Backend - backend/) ===
+backend/node_modules/
+backend/.env
+backend/dist/
+backend/coverage/
+
+# === React (Frontend - frontend/) ===
+frontend/node_modules/
+frontend/.env
+frontend/.DS_Store
+frontend/build/
+frontend/coverage/
+
+# === Logs ===
+*.log
+logs
+*.pid
+*.seed
+*.pid.lock
+
+# === System Files ===
+Thumbs.db
+desktop.ini
